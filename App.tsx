@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import styled from 'styled-components/native'
 
-import Routes from './src/routes'
+import BarNavigation from './src/components/BarNavigation'
 
 const Container = styled.View`
   flex: 1;
@@ -11,8 +11,8 @@ const Container = styled.View`
 export default function App() {
   return (
     <Container>
-      <StatusBar style="auto" />
-      <Routes />
+      <StatusBar style="light"/>
+      <BarNavigation />
     </Container>
   );
 }
