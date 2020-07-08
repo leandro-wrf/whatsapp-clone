@@ -42,7 +42,7 @@ const MessagesBox = () => {
       </Row>
 
       <ShowContacts>
-        <MaterialIcons name="chat" size={32} color="#eeeeee"/>
+        <MaterialIcons name="chat" size={24} color="#eeeeee"/>
       </ShowContacts>
     </Container>
   )
