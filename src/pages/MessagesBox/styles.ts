@@ -6,7 +6,7 @@ export const Container = styled.View`
   flex: 1;
 `
 
-export const Row = styled.View`
+export const BoxMessage = styled.View`
   flex-direction: row;
 `
 

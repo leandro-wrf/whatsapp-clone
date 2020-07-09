@@ -1,9 +1,10 @@
 import React from 'react'
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import {  
   Container,
-  Row,
+  BoxMessage,
   Profile,
   Description,
   ViewTop,
@@ -15,9 +16,11 @@ import {
 } from './styles'
 
 const MessagesBox = () => {
+  const navigation = useNavigation()
+
   return (
     <Container>
-      <Row>
+      <BoxMessage>
         <Profile>
           <MaterialCommunityIcons 
             name="account-circle" 
@@ -25,7 +28,9 @@ const MessagesBox = () => {
             color="#90b8f8"
           />
         </Profile>
-        <Description>
+        <Description
+          onPress={() => navigation.navigate('Chat')}
+        >
           <ViewTop>
             <ContactName>Amor</ContactName>
             <Hour>21:45</Hour>
@@ -39,7 +44,7 @@ const MessagesBox = () => {
             <LastMessage>Tchau!</LastMessage>
           </ViewBottom>
         </Description>
-      </Row>
+      </BoxMessage>
 
       <ShowContacts>
         <MaterialIcons name="chat" size={24} color="#eeeeee"/>
