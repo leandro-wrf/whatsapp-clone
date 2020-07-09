@@ -6,7 +6,7 @@ import { createMaterialTopTabNavigator, MaterialTopTabBarOptions } from '@react-
 import { Entypo } from '@expo/vector-icons'
 
 import Camera from './pages/Camera/'
-import MessagesBox from './pages/MessagesBox/'
+import { StackMessagesBox } from './stack.routes'
 import Status from './pages/Status/'
 import Calls from './pages/Calls/'
 
@@ -16,6 +16,7 @@ const Routes = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
+        initialRouteName="CONVERSAS"
         tabBarOptions={{
           pressColor: '#5f85db',
           labelStyle: {
@@ -38,14 +39,14 @@ const Routes = () => {
         }}
       >
         <Tab.Screen 
-          name="C"
+          name="Camera"
           component={Camera}
 
           options={{
             tabBarLabel: ()  => <Entypo name="camera" size={24} color="#eeeeee" />
           }}
         />
-        <Tab.Screen name="CONVERSAS" component={MessagesBox} />
+        <Tab.Screen name="CONVERSAS" component={StackMessagesBox} />
         <Tab.Screen name="STATUS" component={Status} />
         <Tab.Screen name="CHAMADAS" component={Calls} />
       </Tab.Navigator>
